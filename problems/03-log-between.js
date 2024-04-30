@@ -6,15 +6,52 @@ high number, inclusive. Inclusive means that the range includes the low and
 high numbers.
 */
 
-// Your code here 
+function logBetween(num1, num2) {
 
-// logBetween(-1, 2);
+    if(num1 > num2) {
+        return 'num1 must be smaller than num2';
+    }
+
+    for(let i = num1; i <= num2; i++) {
+        console.log(i);
+    }
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+logBetween(-1, 2);
 /* prints out:
 -1
 0
 1
 2
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = logBetween;

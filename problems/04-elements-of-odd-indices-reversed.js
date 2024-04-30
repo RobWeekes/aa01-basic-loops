@@ -5,12 +5,22 @@ string in reverse order.
 */
 
 function elementsOfOddIndicesReversed(str) {
-  // Your code here 
+    let result = [];
+    for(let i = 0; i < str.length; i++) {
+        let char = str[i];
+        console.log(char);
+
+        if(i % 2 === 1) {
+            result.unshift(char);
+            console.log(result);
+        }
+    }
+    return result.join('');
 }
 
-// console.log(elementsOfOddIndicesReversed('academy')); // 'mdc'
-// console.log(elementsOfOddIndicesReversed('planet'));  // 'tnl'
-// console.log(elementsOfOddIndicesReversed('sport'));   // 'rp'
+console.log(elementsOfOddIndicesReversed('academy')); // 'mdc'
+console.log(elementsOfOddIndicesReversed('planet'));  // 'tnl'
+console.log(elementsOfOddIndicesReversed('sport'));   // 'rp'
 
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
