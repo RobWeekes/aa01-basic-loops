@@ -5,12 +5,17 @@ half of characters in the string parameter.
 */
 
 function secondHalf(str) {
-  // Your code here 
+    let result = '';    // Math.round also works to round up from x.5
+    for(let i = Math.ceil(str.length / 2); i < str.length; i++) {
+        result += str[i];
+        console.log(result);
+    }
+    return result;
 }
 
-// console.log(secondHalf('academy')); // 'emy'
-// console.log(secondHalf('planet'));  // 'net'
-// console.log(secondHalf('sport'));   // 'rt'
+console.log(secondHalf('academy')); // 'emy'
+console.log(secondHalf('planet'));  // 'net'
+console.log(secondHalf('sport'));   // 'rt'
 
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/

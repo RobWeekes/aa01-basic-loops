@@ -16,14 +16,49 @@ So the two rules for our version of Pig Latin are:
    the first vowel** to the **end of the word** then add 'ay'
 */
 
+const vowels = "aeiouAEIOU";
+
 function pigLatinWord(word) {
-    // Your code here 
+    let result = '';
+    // let resultArr = word.split('');  // splice not practical
+    // console.log(resultArr);
+
+    for(let i = 0; i < word.length; i++) {
+        let first = word[0];
+        let char = word[i];
+        console.log(char);
+
+        // word starts with vowel
+        if(vowels.includes(first)) {
+            result = word + 'yay';
+            console.log(result);
+            return result;
+        }
+
+        // word starts with consonant
+        if(vowels.includes(char)) {
+            console.log(i);
+            result = word.slice(i) + word.slice(0, i) + 'ay';
+            // splice(start, deleteCount, item1)
+            // console.log(resultArr);
+            // resultArr.splice(0, i);
+            // console.log(resultArr);
+            // // resultArr.splice(resultArr.length, 0, '');  // splice not practical
+            // resultArr.join('');
+
+            console.log(result);
+            // console.log(resultArr);
+            return result;
+            // return resultArr.join('');
+        }
+    }
 };
 
-// console.log(pigLatinWord("apple")); //=> "appleyay"
-// console.log(pigLatinWord("eat")); //=> "eatyay"
-// console.log(pigLatinWord("banana")); //=> "ananabay"
-// console.log(pigLatinWord("trash")); //=> "ashtray"
+console.log(pigLatinWord("apple")); //=> "appleyay"
+console.log(pigLatinWord("eat")); //=> "eatyay"
+console.log(pigLatinWord("banana")); //=> "ananabay"
+console.log(pigLatinWord("trash")); //=> "ashtray"
+
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = pigLatinWord;

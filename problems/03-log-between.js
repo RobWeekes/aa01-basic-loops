@@ -7,29 +7,23 @@ high numbers.
 */
 
 function logBetween(num1, num2) {
-
+    let numArr = [];             // array not wanted
     if(num1 > num2) {
         return 'num1 must be smaller than num2';
     }
 
     for(let i = num1; i <= num2; i++) {
         console.log(i);
+        // numArr.push(i);      // array not wanted, print individual numbers
+        // console.log(numArr);
     }
-
+    // return numArr;           // array not wanted
 };
 
 
+logBetween(5, 10);
 
-
-
-
-
-
-
-
-
-
-
+logBetween(10, 5);
 
 logBetween(-1, 2);
 /* prints out:

@@ -6,14 +6,24 @@ contain a vowel, return null.
 Vowels are the letters "a", "e", "i", "o", "u".
 */
 
-// Your code here 
+const vowels = "aeiou";
 
-// console.log(getLastVowel('battery'));      // 'e'
-// console.log(getLastVowel('tunnel'));       // 'e'
-// console.log(getLastVowel('dog'));          // 'o'
-// console.log(getLastVowel('conventional')); // 'a'
-// console.log(getLastVowel('rhythm'));       // null
-// console.log(getLastVowel('try'));          // null
+const getLastVowel = function (str) {
+    for(let i = str.length - 1; i >= 0; i--) {
+        if(vowels.includes(str[i])) {
+            return str[i];
+        }
+    }
+    return null;
+}
+
+console.log(getLastVowel('battery'));      // 'e'
+console.log(getLastVowel('tunnel'));       // 'e'
+console.log(getLastVowel('dog'));          // 'o'
+console.log(getLastVowel('conventional')); // 'a'
+console.log(getLastVowel('rhythm'));       // null
+console.log(getLastVowel('try'));          // null
+
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = getLastVowel;
