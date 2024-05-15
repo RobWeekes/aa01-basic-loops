@@ -7,19 +7,13 @@ const doubleLetterCount = str => {
     let count = 0;
 
     for(let i = 0; i < str.length; i++) {
-        let char1 = str[i];
-        console.log(char1);
-        let char2 = str[i + 1];
-        console.log(char2);
-
-        if(char2 === char1) {
+        if(str[i + 1] === str[i]) {
             count++;
             console.log(count);
         }
     }
     return count;
 }
-
 
 
 console.log(doubleLetterCount("the jeep rolled down the hill"));  // 3
