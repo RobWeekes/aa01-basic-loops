@@ -7,6 +7,7 @@ Feel free to use this variable: let alphabet = "abcdefghijklmnopqrstuvwxyz";
 */
 
 let alphabet = "abcdefghijklmnopqrstuvwxyz";
+// let alphabet = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz";
 
 function caesarCipher(string, num) {
     let newStr = '';
